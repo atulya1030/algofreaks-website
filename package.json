@@ -2,7 +2,7 @@
   "name": "webpro",
   "version": "1.0.0",
   "description": "Website based on Data Structure and Algorithm",
-  "main": "index.html",
+  "main": "login.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
