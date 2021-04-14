@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" href="node_modules\flickity\dist\flickity.css">
+    <link rel="stylesheet" href="css/array.css">
+    <title>Array</title>
+</head>
+
+<body>
+    <!-- Top navigation -->
+    <div class="topnav">
+        <!-- Centered link -->
+        <div class="topnav-centered">
+            <a href="#home">AlgoFreak</a>
+        </div>
+
+        <!-- Left-aligned links (default) -->
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+
+        <!-- Right-aligned links -->
+        <div class="topnav-right">
+            <a href="#search">Search</a>
+            <a href="#about">About</a>
+        </div>
+    </div>
+    <hr>
+    <!--header-->
+    <div id="header">
+        <div id="header1">
+            <a href="index.html">AlgoFreak</a>
+        </div>
+        <div id="header2">
+            <p>Unit:Array</p>
+        </div>
+    </div>
+    <!--Sidebar navigation-->
+    <nav class="navigation" id="mainNav">
+        <h7>CONTENT</h7>
+        <a class="navigation__link" href="#1">Introduction</a>
+        <a class="navigation__link" href="#2">Indexing</a>
+        <a class="navigation__link" href="#3">Syntax</a>
+        <a class="navigation__link" href="#4">Array C/C++</a>
+        <a class="navigation__link" href="#5">Pros and Cons</a>
+        <a class="navigation__link" href="#6">Depiction</a>
+    </nav>
+
+    <div class="content-area">
+        <div class="wrapper">
+            <div id="1" class="banner">
+                <div class="text-content">
+                    <h4>Intro</h4>
+                    <p>An array is collection of items stored at contiguous memory locations. The idea is to store multiple
+                        items of same type together. This makes it easier to calculate the position of each element by simply
+                        adding an offset to a base value, i.e., the memory location of the first element of the array (generally
+                        denoted by the name of the array).</p>
+                    <p>For simplicity, we can think of an array a fleet of stairs where on each step is placed a value (let’s
+                        say one of your friends). Here, you can identify the location of any of your friends by simply knowing
+                        the count of the step they are on.
+                        <br> Remember: “Location of next index depends on the data type we use”.</p>
+                    <img src="img/p1.png">
+                    <p>The above image can be looked as a top-level view of a staircase where you are at the base of staircase.
+                        Each element can be uniquely identified by their index in the array (in a similar way as you could
+                        identify your friends by the step on which they were on in the above example).</p>
+                </div>
+            </div>
+            <hr>
+            <div id="2" class="index-area">
+                <div class="text-content">
+                    <h4>Indexing</h4>
+                    <strong>Types of indexing in array</strong>
+                    <ul>
+                        <li>0 (zero-based indexing): The first element of the array is indexed by subscript of 0</li>
+                        <li>1 (one-based indexing): The second element of the array is indexed by subscript of 1</li>
+                        <li>n (n-based indexing): The base index of an array can be freely chosen. Usually programming languages allowing n-based indexing also allow negative index values and other scalar data types like enumerations, or characters may be used as an array index.</li>
+                        <br>
+                        <img src="img/p2.png">
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div id="3" class="syntax-area">
+                <div class="text-content">
+                    <h4>Syntax</h4>
+                    <p>C++ provides a data structure, the array, which stores a fixed-size sequential collection of elements<br>
+                         of the same type. An array is used to store a collection of data, but it is often more useful to think of<br>
+                          an array as a collection of variables of the same type.</p>
+                    <p>Instead of declaring individual variables, such as number0, number1, ..., and number99, you declare<br>
+                         one array variable such as numbers and use numbers[0], numbers[1], and ..., numbers[99] to<br>
+                          represent individual variables. A specific element in an array is accessed by an index.</p>
+                          <img src="img/a2.png">               
+                        </div>
+            </div>
+            <hr>
+            <div id="4" class="lan-area">
+                <div class="text-content">
+                    <h4>Array in C/C++</h4>
+                    <p>An array in C or C++ is a collection of items stored at contiguous memory locations and elements can be accessed randomly using indices of an array. They are used to store similar type of elements as in the data type must be the same for all elements. They can be used to store collection of primitive data types such as int, float, double, char, etc of any particular type. To add to it, an array in C or C++ can store derived data types such as the structures, pointers etc.</p>
+                    <p>#include <iostream> <br>
+                        using namespace std; <br>
+                        <br>
+                        int main() <br>
+                        { <br>
+                            int arr[5]; <br>
+                            arr[0] = 5; <br>
+                            arr[2] = -10; <br>
+                            <br>
+                            // this is same as arr[1] = 2<br> 
+                            arr[3 / 2] = 2; <br>
+                            arr[3] = arr[0]; <br>
+                            <br>
+                            cout << arr[0] << " " << arr[1]<br> 
+                                 << " " << arr[2] << " " << arr[3];<br> 
+                                 <br>
+                            return 0; <br>
+                        } <br>
+                        <br><br>
+                        Output:<br>
+5 2 -10 5
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div id="5" class="adv-area">
+                <div class="text-content">
+                    <h4>Pros and cons</h4>
+                    <h5>Pros :</h5>
+                    <ul>
+                        <li>Arrays represent multiple data items of the same type using a single name.</li>
+                        <li>In arrays, the elements can be accessed randomly by using the index number.</li>
+                        <li>Arrays allocate memory in contiguous memory locations for all its elements. Hence there is no chance of extra memory being allocated in case of arrays. This avoids memory overflow or shortage of memory in arrays.</li>
+                        <li>Using arrays, other data structures like linked lists, stacks, queues, trees, graphs etc can be implemented.</li>
+                        <li>Two-dimensional arrays are used to represent matrices.</li>
+                    </ul>
+                    <h5>Cons :</h5>
+                    <ul>
+                        <li>The number of elements to be stored in an array should be known in advance.</li>
+                        <li>An array is a static structure (which means the array is of fixed size). Once declared the size of the array cannot be modified. The memory which is allocated to it cannot be increased or decreased.</li>
+                        <li>Insertion and deletion are quite difficult in an array as the elements are stored in consecutive memory locations and the shifting operation is costly.</li>
+                        <li>Allocating more memory than the requirement leads to wastage of memory space and less allocation of memory also leads to a problem.</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div id="6" class="depict-area">
+                <div class="text-content">
+                    <h4>Depiction</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/array.js"></script>
+    <script src="node_modules\flickity\dist\flickity.pkgd.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" href="node_modules\flickity\dist\flickity.css">
+    <link rel="stylesheet" href="css/array.css">
+    <title>Queue</title>
+</head>
+
+<body>
+    <!-- Top navigation -->
+    <div class="topnav">
+        <!-- Centered link -->
+        <div class="topnav-centered">
+            <a href="#home">AlgoFreak</a>
+        </div>
+
+        <!-- Left-aligned links (default) -->
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+
+        <!-- Right-aligned links -->
+        <div class="topnav-right">
+            <a href="#search">Search</a>
+            <a href="#about">About</a>
+        </div>
+    </div>
+    <hr>
+    <!--header-->
+    <div id="header">
+        <div id="header1">
+            <a href="index.html">AlgoFreak</a>
+        </div>
+        <div id="header2">
+            <p>Unit:Queue</p>
+        </div>
+    </div>
+    <!--Sidebar navigation-->
+    <nav class="navigation" id="mainNav">
+        <h7>CONTENT</h7>
+        <a class="navigation__link" href="#1">Introduction</a>
+        <a class="navigation__link" href="#2">Basic Operations</a>
+        <a class="navigation__link" href="#3">Syntax</a>
+        <a class="navigation__link" href="#4">Queue C/C++</a>
+        <a class="navigation__link" href="#5">FAQs</a>
+        <a class="navigation__link" href="#6">Depiction</a>
+    </nav>
+
+    <div class="content-area">
+        <div class="wrapper">
+            <div id="1" class="banner">
+                <div class="text-content">
+                    <h4>Intro</h4>
+                    <p>A Queue is a linear structure which follows a particular order in which the operations are performed. The order is First In First Out (FIFO). A good example of a queue is any queue of consumers for a resource where the consumer that came first is served first. The difference between stacks and queues is in removing. In a stack we remove the item the most recently added; in a queue, we remove the item the least recently added.</p>
+                    <img src="img/Q1.png">
+                    <p>Queue is used when things don’t have to be processed immediatly, but have to be processed in <b>F</b>irst <b>I</b>n <b>F</b>irst <b>O</b>ut order like Breadth First Search. This property of Queue makes it also useful in following kind of scenarios.</p>
+                </div>
+            </div>
+            <hr>
+            <div id="2" class="index-area">
+                <div class="text-content">
+                    <h4>Basic Operations</h4>
+                    <strong>Mainly the following four basic operations are performed on queue:</strong>
+                    <ul>
+                        <li><b>Enqueue:</b> Adds an item to the queue. If the queue is full, then it is said to be an Overflow condition.</li>
+                        <li><b>Dequeue:</b> Removes an item from the queue. The items are popped in the same order in which they are pushed. If the queue is empty, then it is said to be an Underflow condition.</li>
+                        <li><b>Front:</b> Get the front item from queue.</li>
+                        <li><b>Rear:</b> Get the last item from queue.</li>
+                        <br>
+                        <img src="img/Q2.png">
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div id="3" class="syntax-area">
+                <div class="text-content">
+                    <h4>Syntax</h4>
+                <h5>Enqueue:</h5>
+                <ol>
+                    <li>Check if the queue is full or not.</li>
+                    <li>If the queue is full, then print overflow error and exit the program.</li>
+                    <li>If the queue is not full, then increment the tail and add the element.</li>
+                </ol>
+                <br>
+                <h5>Dequeue:</h5>
+                <ol>
+                    <li>Check if the queue is empty or not.</li>
+                    <li>If the queue is empty, then print underflow error and exit the program.</li>
+                    <li>If the queue is not empty, then print the element at the head and increment the head.</li>
+                </ol>
+                          <img src="img/q4.png">               
+                        </div>
+            </div>
+            <br><br><br><br><br><br>
+            <hr>
+            <div id="4" class="lan-area">
+                <div class="text-content">
+                    <h4>Queue in C/C++</h4>
+                    <p>
+                        #include <iostream><br>
+                            using namespace std;<br>
+                            int queue[100], n = 100, front = - 1, rear = - 1;<br>
+                            void Insert() {<br>
+                               int val;<br>
+                               if (rear == n - 1)<br>
+                               cout<<"Queue Overflow"<<endl;<br>
+                               else {<br>
+                                  if (front == - 1)<br>
+                                  front = 0;<br>
+                                  cout<<"Insert the element in queue : "<<endl;<br>
+                                  cin>>val;<br>
+                                  rear++;<br>
+                                  queue[rear] = val;<br>
+                               }<br>
+                            }<br>
+                            void Delete() {<br>
+                               if (front == - 1 || front > rear) {<br>
+                                  cout<<"Queue Underflow ";<br>
+                                  return ;<br>
+                               } else {<br>
+                                  cout<<"Element deleted from queue is : "<< queue[front] <<endl;<br>
+                                  front++;;<br>
+                               }<br>
+                            }<br>
+                            void Display() {<br>
+                               if (front == - 1)<br>
+                               cout<<"Queue is empty"<<endl;<br>
+                               else {<br>
+                                  cout<<"Queue elements are : ";<br>
+                                  for (int i = front; i <= rear; i++)<br>
+                                  cout<<queue[i]<<" ";<br>
+                                     cout<<endl;<br>
+                               }<br>
+                            }<br>
+                            int main() {<br>
+                               int ch;<br>
+                               cout<<"1) Insert element to queue"<<endl;<br>
+                               cout<<"2) Delete element from queue"<<endl;<br>
+                               cout<<"3) Display all the elements of queue"<<endl;<br>
+                               cout<<"4) Exit"<<endl;<br>
+                               do {<br>
+                                  cout<<"Enter your choice : "<<endl;<br>
+                                  cin<<ch;<br>
+                                  switch (ch) {<br>
+                                     case 1: Insert();<br>
+                                     break;<br>
+                                     case 2: Delete();<br>
+                                     break;<br>
+                                     case 3: Display();<br>
+                                     break;<br>
+                                     case 4: cout<<"Exit"<<endl;<br>
+                                     break;<br>
+                                     default: cout<<"Invalid choice"<<endl;<br>
+                                  }<br>
+                               } while(ch!=4);<br>
+                               return 0;<br>
+                            }<br>
+                    </p>
+                    <p>
+                        The output of the above program is as follows<br>
+                        <br>
+1) Insert element to queue<br>
+2) Delete element from queue<br>
+3) Display all the elements of queue<br>
+4) Exit<br>
+Enter your choice : 1<br>
+Insert the element in queue : 4<br>
+Enter your choice : 1<br>
+Insert the element in queue : 3<br>
+Enter your choice : 1<br>
+Insert the element in queue : 5<br>
+Enter your choice : 2<br>
+Element deleted from queue is : 4<br>
+Enter your choice : 3<br>
+Queue elements are : 3 5<br>
+Enter your choice : 7<br>
+Invalid choice<br>
+Enter your choice : 4<br>
+Exit<br>
+                    </p>
+                        
+                </div>
+            </div>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <div id="5" class="adv-area">
+                <div class="text-content">
+                    <h4>FAQs</h4>
+                    <ol>
+                        <li>Implement Queue using Stacks</li>
+                        <li>LRU Cache Implementation</li>
+                        <li>Implement Stack using Queues</li>
+                        <li>How to efficiently implement k Queues in a single array?</li>
+                        <li>Implementation of Deque using circular array</li>
+                    </ol>
+                </div>
+            </div>
+            <hr>
+            <div id="6" class="depict-area">
+                <div class="text-content">
+                    <h4>Depiction</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/array.js"></script>
+    <script src="node_modules\flickity\dist\flickity.pkgd.min.js"></script>
+</body>
+
+</html>

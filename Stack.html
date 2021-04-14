@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" href="node_modules\flickity\dist\flickity.css">
+    <link rel="stylesheet" href="css/array.css">
+    <title>Stack</title>
+</head>
+
+<body>
+    <!-- Top navigation -->
+    <div class="topnav">
+        <!-- Centered link -->
+        <div class="topnav-centered">
+            <a href="#home">AlgoFreak</a>
+        </div>
+
+        <!-- Left-aligned links (default) -->
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+
+        <!-- Right-aligned links -->
+        <div class="topnav-right">
+            <a href="#search">Search</a>
+            <a href="#about">About</a>
+        </div>
+    </div>
+    <hr>
+    <!--header-->
+    <div id="header">
+        <div id="header1">
+            <a href="index.html">AlgoFreak</a>
+        </div>
+        <div id="header2">
+            <p>Unit:Stack</p>
+        </div>
+    </div>
+    <!--Sidebar navigation-->
+    <nav class="navigation" id="mainNav">
+        <h7>CONTENT</h7>
+        <a class="navigation__link" href="#1">Introduction</a>
+        <a class="navigation__link" href="#2">Basic Operations</a>
+        <a class="navigation__link" href="#3">Syntax</a>
+        <a class="navigation__link" href="#4">Stack C/C++</a>
+        <a class="navigation__link" href="#5">FAQs</a>
+        <a class="navigation__link" href="#6">Depiction</a>
+    </nav>
+
+    <div class="content-area">
+        <div class="wrapper">
+            <div id="1" class="banner">
+                <div class="text-content">
+                    <h4>Intro</h4>
+                    <p>Stack is a linear data structure which follows a particular order in which the operations are performed. The order may be LIFO(Last In First Out) or FILO(First In Last Out).</p>
+                    <p>There are many real-life examples of a stack. Consider an example of plates stacked over one another in the canteen. The plate which is at the top is the first one to be removed, i.e. the plate which has been placed at the bottommost position remains in the stack for the longest period of time. So, it can be simply seen to follow LIFO(Last In First Out)/FILO(First In Last Out) order.
+                        </p>
+                    <img src="img/stack.png">
+                    <p>Every time an element is added, it goes on the top of the stack and the only element that can be removed is the element that is at the top of the stack, just like a pile of objects.</p>
+                </div>
+            </div>
+            <hr>
+            <div id="2" class="index-area">
+                <div class="text-content">
+                    <h4>Basic Operations</h4>
+                    
+                    <p>Stack operations may involve initializing the stack, using it and then de-initializing it. Apart from these basic stuffs, a stack is used for the following two primary operations −</p>
+                    <ul>
+                        <li><b>push() − </b>Pushing (storing) an element on the stack.</li>
+                        <li><b>pop() − </b>Removing (accessing) an element from the stack.</li>
+                    </ul>
+                        
+                        <p>To use a stack efficiently, we need to check the status of stack as well. For the same purpose, the following functionality is added to stacks −</p>
+                        
+                    <ul>    
+                        <li><b>peek() − </b>get the top data element of the stack, without removing it.</li>
+                        <li><b>isFull() − </b>check if stack is full.</li>
+                        <li><b>isEmpty() − </b>check if stack is empty.</li>                   
+                    </ul>
+                        <br>
+                        <img src="img/s2.png">
+                    </ul>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <hr>
+            <div id="3" class="syntax-area">
+                <div class="text-content">
+                    <h4>Syntax</h4>
+                    
+                    <p>The operations work as follows:</p>
+                    <ol>
+                        <li>A pointer called <b>TOP</b> is used to keep track of the top element in the stack.</li>
+                        <li>When initializing the stack, we set its value to -1 so that we can check if the stack is empty by comparing <b>TOP == -1.</b></li>
+                        <li>On pushing an element, we increase the value of <b>TOP</b> and place the new element in the position pointed to by <b>TOP</b>.</li>
+                        <li>On popping an element, we return the element pointed to by <b>TOP</b> and reduce its value.</li>
+                        <li>Before pushing, we check if the stack is already full.</li>
+                        <li>Before popping, we check if the stack is already empty.</li>
+                    </ol>
+                    <img src="img/s3.png">
+                </div>
+            </div>
+            <hr>
+            <div id="4" class="lan-area">
+                <div class="text-content">
+                    <h4>Stack in C/C++</h4>
+                    <p>
+                        #include <bits/stdc++.h> <br>
+using namespace std;  <br>
+  
+void showstack(stack <int> s)  <br>
+{  <br>
+    while (!s.empty()) <br> 
+    {  <br>
+        cout << '\t' << s.top(); <br> 
+        s.pop();  <br>
+    }  <br>
+    cout << '\n'; <br> 
+}  <br>
+  
+int main () <br> 
+{  <br>
+    stack <int> s; <br> 
+    s.push(10);  <br>
+    s.push(30);  <br>
+    s.push(20);  <br>
+    s.push(5);  <br>
+    s.push(1);  <br>
+    
+    cout << "The stack is : "; <br> 
+    showstack(s);  <br>
+  
+    cout << "\ns.size() : " << s.size(); <br> 
+    cout << "\ns.top() : " << s.top();  <br>
+  
+  
+    cout << "\ns.pop() : ";  <br>
+    s.pop();  <br>
+    showstack(s);  <br>
+  
+    return 0; <br> 
+}  <br>
+                    </p>
+                    <p>
+                        Output:<br>
+The stack is :     1    5    20    30    10<br>
+<br>
+s.size() : 5<br>
+s.top() : 1<br>
+s.pop() :     5    20    30    10
+                    </p>
+                </div>
+            </div>
+            <br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <div id="5" class="adv-area">
+                <div class="text-content">
+                    <h4>FAQs</h4>
+                    <ol>
+                          <li>Infix to Postfix Conversion using Stack</li>
+                          <li>Evaluation of Postfix Expression</li>
+                          <li>Reverse a String using Stack</li>
+                          <li>Implement two stacks in an array</li>
+                          <li>Check for balanced parentheses in an expression</li>
+                    </ol>
+                </div>
+            </div>
+            <hr>
+            <div id="6" class="depict-area">
+                <div class="text-content">
+                    <h4>Depiction</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/array.js"></script>
+    <script src="node_modules\flickity\dist\flickity.pkgd.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" href="node_modules\flickity\dist\flickity.css">
+    <link rel="stylesheet" href="css/array.css">
+    <title>Linked List</title>
+</head>
+
+<body>
+    <!-- Top navigation -->
+    <div class="topnav">
+        <!-- Centered link -->
+        <div class="topnav-centered">
+            <a href="#home">AlgoFreak</a>
+        </div>
+
+        <!-- Left-aligned links (default) -->
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+
+        <!-- Right-aligned links -->
+        <div class="topnav-right">
+            <a href="#search">Search</a>
+            <a href="#about">About</a>
+        </div>
+    </div>
+    <hr>
+    <!--header-->
+    <div id="header">
+        <div id="header1">
+            <a href="index.html">AlgoFreak</a>
+        </div>
+        <div id="header2">
+            <p>Unit:Linked List</p>
+        </div>
+    </div>
+    <!--Sidebar navigation-->
+    <nav class="navigation" id="mainNav">
+        <h7>CONTENT</h7>
+        <a class="navigation__link" href="#1">Introduction</a>
+        <a class="navigation__link" href="#2">Why Linked List?</a>
+        <a class="navigation__link" href="#3">Syntax</a>
+        <a class="navigation__link" href="#4">Linked List C/C++</a>
+        <a class="navigation__link" href="#5">FAQs</a>
+        <a class="navigation__link" href="#6">Depiction</a>
+    </nav>
+
+    <div class="content-area">
+        <div class="wrapper">
+            <div id="1" class="banner">
+                <div class="text-content">
+                    <h4>Intro</h4>
+                    <p>A linked list is a linear data structure, in which the elements are not stored at contiguous memory locations. The elements in a linked list are linked using pointers as shown in the below image:</p>
+                    <img src="img/l1.png">
+                    <p>In simple words, a linked list consists of nodes where each node contains a data field and a reference(link) to the next node in the list.</p>
+                </div>
+            </div>
+            <hr>
+            <div id="2" class="index-area">
+                <div class="text-content">
+                    <h4>Why Linked List?</h4>
+                    <p>Arrays can be used to store linear data of similar types, but arrays have the following limitations.</p>
+                    <ol>
+                        <li>The size of the arrays is fixed: So we must know the upper limit on the number of elements in advance. Also, generally, the allocated memory is equal to the upper limit irrespective of the usage.</li>
+                        <li>Inserting a new element in an array of elements is expensive because the room has to be created for the new elements and to create room existing elements have to be shifted.</li>
+                        
+                       
+                       
+                    </ol>
+                    <p>For example, in a system, if we maintain a sorted list of IDs in an array id[].
+
+                        id[] = [1000, 1010, 1050, 2000, 2040].</p>
+                        <p>And if we want to insert a new ID 1005, then to maintain the sorted order, we have to move all the elements after 1000 (excluding 1000).</p>
+                        <p>Deletion is also expensive with arrays until unless some special techniques are used. For example, to delete 1010 in id[], everything after 1010 has to be moved.</p>
+                        <img src="img/l2.png">             
+                    </div>
+            </div>
+            <br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <div id="3" class="syntax-area">
+                <div class="text-content">
+                    <h4>Syntax</h4>
+                <p>A linked list is represented by a pointer to the first node of the linked list. The first node is called the head. If the linked list is empty, then the value of the head is NULL.
+                    Each node in a list consists of at least two parts:<br>
+                    1) data<br>
+                    2) Pointer (Or Reference) to the next node<br>
+                    In C, we can represent a node using structures. Below is an example of a linked list node with integer data.<br>
+                    In Java or C#, LinkedList can be represented as a class and a Node as a separate class. The LinkedList class contains a reference of Node class type.<br></p>
+                          <img src="img/l3.png">               
+                        </div>
+            </div>
+            
+            <hr>
+            <div id="4" class="lan-area">
+                <div class="text-content">
+                    <h4>Linked List in C/C++</h4>
+                    <p>
+                        #include <bits/stdc++.h> <br>
+using namespace std; <br>
+<br>
+class Node {<br> 
+public: <br>
+    int data; <br>
+    Node* next; <br>
+}; <br>
+<br>
+// This function prints contents of linked list <br>
+// starting from the given node <br>
+void printList(Node* n) <br>
+{ <br>
+    while (n != NULL) { <br>
+        cout << n->data << " "; <br>
+        n = n->next; <br>
+    } <br>
+} <br>
+<br>
+// Driver code <br>
+int main() <br>
+{ <br>
+    Node* head = NULL; <br>
+    Node* second = NULL; <br>
+    Node* third = NULL; <br>
+    <br>
+    // allocate 3 nodes in the heap <br>
+    head = new Node(); <br>
+    second = new Node(); <br>
+    third = new Node(); <br>
+    <br>
+    head->data = 1; // assign data in first node<br> 
+    head->next = second; // Link first node with second<br> 
+    <br>
+    second->data = 2; // assign data to second node <br>
+    second->next = third; <br>
+    <br>
+    third->data = 3; // assign data to third node <br>
+    third->next = NULL; <br>
+    <br>
+    printList(head); <br>
+    <br>
+    return 0; <br>
+} <br>
+<br>
+<br>
+<b>Output:</b><br><br>
+ 1  2  3
+
+                    </p>
+                        
+                </div>
+            </div>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <div id="5" class="adv-area">
+                <div class="text-content">
+                    <h4>FAQs</h4>
+                    <ol>
+                        <li>Print the Middle of a given linked list</li>
+                        <li>Flattening a linked list</li>
+                        <li>Delete the elements in an linked list whose sum is equal to zero</li>
+                        <li>Delete middle of linked list</li>
+                        <li>Remove duplicate elements from sorted linked list</li>
+                    </ol>
+                </div>
+            </div>
+            <hr>
+            <div id="6" class="depict-area">
+                <div class="text-content">
+                    <h4>Depiction</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/array.js"></script>
+    <script src="node_modules\flickity\dist\flickity.pkgd.min.js"></script>
+</body>
+
+</html>

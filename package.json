@@ -1,0 +1,30 @@
+{
+  "name": "webpro",
+  "version": "1.0.0",
+  "description": "Website based on Data Structure and Algorithm",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amit2608y/WebPro.git"
+  },
+  "author": "Amit Yadav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amit2608y/WebPro/issues"
+  },
+  "homepage": "https://github.com/amit2608y/WebPro#readme",
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.0",
+    "bootstrap-social": "^5.1.1",
+    "flickity": "^2.2.1",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
+  }
+}

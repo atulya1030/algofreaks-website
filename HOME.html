@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="An example pen showing how a basic CSS Grid container can create a nice, responsive card layout.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ALGO-FREAKS</title>
+
+<style>
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 6rem;
+  background-color: #000000;
+  font-family: "Inter", sans-serif;
+}
+@media (max-width: 60em) {
+  body {
+    padding: 3rem;
+  }
+}
+
+.grid {
+  display: grid;
+  width: 114rem;
+  grid-gap: 6rem;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  align-items: start;
+}
+@media (max-width: 60em) {
+  .grid {
+    grid-gap: 3rem;
+  }
+}
+.grid__item {
+  background-color: #fff;
+  border-radius: .4rem;
+  overflow: hidden;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: 0.2s;
+}
+.grid__item:hover {
+  transform: translateY(-0.5%);
+  box-shadow: 0 3rem 8rem #00b3b3;
+}
+
+.card__img {
+  display: block;
+  width: 100%;
+  height: 18rem;
+  object-fit: cover;
+}
+.card__content {
+  padding: 3rem 3rem;
+}
+.card__header {
+  font-size: 3rem;
+  font-weight: 500;
+  color: #0d0d0d;
+  margin-bottom: 1.5rem;
+}
+.card__text {
+  font-size: 1.5rem;
+  letter-spacing: .1rem;
+  line-height: 1.7;
+  color: #3d3d3d;
+  margin-bottom: 2.5rem;
+}
+.card__btn {
+  display: block;
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+  color: #3363ff;
+  background-color: #e6ecff;
+  border: none;
+  border-radius: .4rem;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.card__btn span {
+  margin-left: 1rem;
+  transition: 0.2s;
+}
+.card_btn:hover, .card_btn:active {
+  background-color: #dce4ff;
+}
+.card_btn:hover span, .card_btn:active span {
+  margin-left: 1.5rem;
+}
+
+</style>
+
+
+
+  </head>
+</html>
+<div class="grid">
+ <a href=array.html style="text-decoration:none">   <div class="grid__item">
+    <div class="card"><img class="card__img" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2250&amp;q=80" alt="Snowy Mountains">
+      <div class="card__content">
+         <h1 class="card__header">ARRAYS</h1>
+        <p class="card__text">An array is a data structure that contains a group of elements. Typically these elements are all of the same data type, such as an integer or string.</p>
+     
+      </div>
+    </div>
+  </div>
+</a>
+ <a href=Stack.html style="text-decoration:none">  
+  <div class="grid__item">
+    <div class="card"><img class="card__img" src="https://images.unsplash.com/photo-1485160497022-3e09382fb310?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2250&amp;q=80" alt="Desert">
+      <div class="card__content">
+        <h1 class="card__header">STACKS</h1>
+        <p class="card__text">Stack is a linear data structure which follows a particular order in which the operations are performed. The order may be LIFO(Last In First Out) or FILO(First In Last Out).</p>
+        
+      </div>
+    </div>
+  </div>
+</a>
+ <a href=Queue.html style="text-decoration:none">  
+  <div class="grid__item">
+    <div class="card"><img class="card__img" src="https://images.unsplash.com/photo-1506318164473-2dfd3ede3623?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=3300&amp;q=80" alt="Canyons">
+      <div class="card__content">
+        <h1 class="card__header">QUEUES</h1>
+        <p class="card__text">A Queue is a linear structure which follows a particular order or rule in which the operations are performed. The order is First In First Out (FIFO). </p>
+      
+        <div class="grid"></div>
+      </div>
+    </div>
+  </div>
+</a>
+ <a href=LinkedList.html style="text-decoration:none">  
+  <div class="grid__item">
+    <div class="card"><img class="card__img" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2250&amp;q=80" alt="Snowy Mountains">
+      <div class="card__content">
+        <h1 class="card__header">LINKED-LIST</h1>
+        <p class="card__text">a linked list is a linear collection of data elements whose order is not given by their physical placement in memory. Instead, each element points to the next.</p>
+        
+      </div>
+    </div>
+  </div>
+</a>
+ <a href=login.html style="text-decoration:none">  
+  <div class="grid__item">
+    <div class="card"><img class="card__img" src="https://images.unsplash.com/photo-1485160497022-3e09382fb310?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2250&amp;q=80" alt="Desert">
+      <div class="card__content">
+        <h1 class="card__header">TREES</h1>
+        <p class="card__text">Tree is a nonlinear data structure consisting of one node called the root and zero or one or more subtrees.A tree can be empty with no nodes.</p>
+        
+      </div>
+    </div>
+  </div>
+</a>
+ <a href=login.html style="text-decoration:none">  
+  <div class="grid__item">
+    <div class="card"><img class="card__img" src="https://images.unsplash.com/photo-1506318164473-2dfd3ede3623?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=3300&amp;q=80" alt="Canyons">
+      <div class="card__content">
+        <h1 class="card__header">GRAPHS</h1>
+        <p class="card__text">A graph is an abstract data type that is meant to implement the undirected graph and directed graph concepts from the field of graph theory within mathematics.</p>
+        
+      </div>
+    </div>
+  </div>
+</div>
+</a>
